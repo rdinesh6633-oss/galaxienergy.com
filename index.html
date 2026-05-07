@@ -604,6 +604,254 @@ footer{background:var(--ink3);border-top:1px solid var(--bd);padding:60px 5% 32p
 
 @media(max-width:600px){.arch-diagram-wrap{padding:18px 12px 16px}.arch-legend{gap:12px 20px}}
 
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   PRICING SECTION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+.price-inv-row{
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:24px;margin-top:56px;
+}
+.price-inv-card{
+  background:var(--ink3);border:1px solid var(--bd);
+  border-radius:16px;padding:32px;
+  position:relative;overflow:hidden;
+  display:flex;flex-direction:column;gap:0;
+}
+.price-inv-card::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:2px;
+  background:linear-gradient(90deg,var(--g),transparent);
+}
+.featured-inv{
+  border-color:rgba(0,168,107,.35);
+  background:rgba(0,168,107,.04);
+}
+.featured-inv::before{background:var(--g)}
+.pic-popular{
+  position:absolute;top:18px;right:18px;
+  background:var(--g);color:#000;
+  font-size:.6rem;font-weight:800;letter-spacing:.1em;
+  padding:4px 12px;border-radius:100px;text-transform:uppercase;
+}
+.pic-badge{
+  display:inline-flex;background:rgba(255,255,255,.06);
+  border:1px solid var(--bd2);border-radius:100px;
+  padding:4px 14px;font-size:.62rem;font-weight:700;
+  letter-spacing:.1em;text-transform:uppercase;color:var(--muted);
+  margin-bottom:14px;width:fit-content;
+}
+.pic-header h3{
+  font-family:'Barlow Condensed',sans-serif;font-weight:900;
+  font-size:1.9rem;line-height:1.05;letter-spacing:-.02em;
+  margin-bottom:6px;
+}
+.pic-tagline{font-size:.8rem;color:var(--muted);margin-bottom:22px}
+.pic-price-block{
+  background:var(--ink2);border:1px solid var(--bd);
+  border-radius:10px;padding:16px 18px;margin-bottom:20px;
+}
+.pic-label{font-size:.62rem;font-weight:700;color:var(--muted);letter-spacing:.1em;text-transform:uppercase;margin-bottom:4px}
+.pic-price{
+  font-family:'Barlow Condensed',sans-serif;font-weight:900;
+  font-size:2.6rem;color:var(--txt);line-height:1;
+}
+.pic-price sup{font-size:1.1rem;vertical-align:top;margin-top:8px;display:inline-block}
+.pic-tax{font-size:.7rem;color:var(--muted);margin-top:4px}
+.pic-specs{list-style:none;display:flex;flex-direction:column;gap:8px;margin-bottom:22px}
+.pic-specs li{display:flex;align-items:center;gap:10px;font-size:.83rem;color:var(--txt2)}
+.ps-icon{width:24px;text-align:center;font-size:.95rem;flex-shrink:0}
+
+/* Battery selector */
+.batt-selector{
+  background:var(--ink2);border:1px solid var(--bd);
+  border-radius:10px;padding:18px;margin-bottom:18px;
+  flex:1;
+}
+.bs-title{font-size:.68rem;font-weight:700;letter-spacing:.1em;color:var(--muted);text-transform:uppercase;margin-bottom:12px}
+.bs-options{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:14px}
+.bs-opt{
+  background:var(--ink3);border:1px solid var(--bd);border-radius:8px;
+  padding:10px 6px;text-align:center;cursor:pointer;
+  transition:border-color .2s,background .2s,transform .15s;
+}
+.bs-opt:hover{border-color:rgba(0,168,107,.4);transform:translateY(-2px)}
+.bs-opt.active{
+  border-color:var(--g);background:rgba(0,168,107,.08);
+}
+.bs-count{
+  font-family:'Barlow Condensed',sans-serif;font-weight:900;
+  font-size:1.6rem;color:var(--g);line-height:1;margin-bottom:3px;
+}
+.bs-opt.active .bs-count{color:var(--g2)}
+.bs-kwh{font-size:.66rem;font-weight:700;color:var(--txt2);margin-bottom:2px}
+.bs-hours{font-size:.6rem;color:var(--muted)}
+.bs-total-row{
+  display:flex;justify-content:space-between;align-items:center;
+  background:rgba(0,168,107,.08);border:1px solid rgba(0,168,107,.2);
+  border-radius:7px;padding:12px 14px;margin-bottom:8px;
+}
+.bs-total-label{font-size:.78rem;font-weight:600;color:var(--txt2)}
+.bs-total-price{
+  font-family:'Barlow Condensed',sans-serif;font-weight:900;
+  font-size:1.5rem;color:var(--g);
+}
+.bs-note{font-size:.66rem;color:var(--muted);text-align:center}
+
+/* Battery module detail */
+.batt-module-detail{
+  display:grid;grid-template-columns:1fr 1fr;gap:48px;
+  align-items:center;margin-top:40px;
+  background:var(--ink3);border:1px solid var(--bd);
+  border-radius:14px;padding:36px;
+}
+.bmd-specs-row{display:grid;grid-template-columns:repeat(6,1fr);gap:12px;margin-top:24px}
+.bmd-spec{
+  background:var(--ink2);border:1px solid var(--bd);
+  border-radius:8px;padding:14px 10px;text-align:center;
+}
+.bmd-sv{
+  font-family:'Barlow Condensed',sans-serif;font-weight:900;
+  font-size:1.3rem;color:var(--g);line-height:1;margin-bottom:4px;
+}
+.bmd-sl{font-size:.6rem;color:var(--muted);font-weight:600;letter-spacing:.06em;text-transform:uppercase}
+
+/* Stack visual */
+.batt-module-detail .stg{margin-bottom:8px}
+.bmd-stack-visual{background:var(--ink2);border:1px solid var(--bd);border-radius:12px;padding:20px}
+.stack-label{font-size:.65rem;font-weight:700;letter-spacing:.1em;color:var(--muted);text-transform:uppercase;text-align:center;margin-bottom:12px}
+.stack-items{display:flex;flex-direction:column;gap:6px}
+.stack-inv{
+  background:rgba(0,168,107,.12);border:2px solid var(--g);
+  border-radius:8px;padding:12px 16px;
+  display:flex;justify-content:space-between;align-items:center;
+  font-size:.82rem;font-weight:700;color:var(--g);
+}
+.stack-inv span,.stack-batt span{font-size:.7rem;font-weight:400;color:var(--muted)}
+.stack-batt{
+  background:var(--ink3);border:1px solid var(--bd);
+  border-radius:8px;padding:10px 16px;
+  display:flex;justify-content:space-between;align-items:center;
+  font-size:.8rem;font-weight:600;color:var(--muted);
+  transition:all .3s;
+}
+.stack-batt.on{
+  background:rgba(0,168,107,.06);border-color:rgba(0,168,107,.3);
+  color:var(--txt2);
+}
+.stack-total{
+  text-align:center;font-size:.76rem;color:var(--muted);
+  margin-top:12px;padding-top:12px;border-top:1px solid var(--bd);
+}
+.stack-total strong{color:var(--g);font-weight:700}
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   BATTERY COMPARISON
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+.bc-table{
+  margin-top:52px;
+  border:1px solid var(--bd);border-radius:14px;overflow:hidden;
+}
+.bc-head{
+  display:grid;grid-template-columns:1.4fr 1fr 1fr;
+  border-bottom:2px solid var(--bd);
+}
+.bc-hcell{
+  padding:18px 22px;font-size:.84rem;font-weight:700;
+  line-height:1.4;
+}
+.bc-hcell span{font-size:.7rem;font-weight:400;color:var(--muted);display:block;margin-top:3px}
+.bc-hcell.feat{background:var(--ink3);color:var(--muted);font-size:.7rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;display:flex;align-items:center}
+.bc-hcell.bad-h{background:rgba(255,82,82,.05);border-left:1px solid rgba(255,82,82,.15);color:#FF8080}
+.bc-hcell.good-h{background:rgba(0,168,107,.06);border-left:1px solid rgba(0,168,107,.2);color:var(--g)}
+.bc-row{display:grid;grid-template-columns:1.4fr 1fr 1fr;border-bottom:1px solid var(--bd)}
+.bc-row:last-child{border-bottom:none}
+.bc-row:nth-child(even) .bc-cell.feat{background:var(--ink2)}
+.bc-cell{padding:14px 22px;font-size:.84rem;color:var(--txt2)}
+.bc-cell small{display:block;font-size:.7rem;color:var(--muted);margin-top:2px;line-height:1.4}
+.bc-cell.feat{color:var(--txt);font-weight:600;background:var(--ink3)}
+.bc-cell.bad-c{background:rgba(255,82,82,.03);border-left:1px solid rgba(255,82,82,.08);color:var(--muted)}
+.bc-cell.good-c{background:rgba(0,168,107,.04);border-left:1px solid rgba(0,168,107,.1);color:var(--txt)}
+.bc-cell.good-c strong{color:var(--g);font-weight:700}
+
+/* Lifetime cost */
+.lcc-block{
+  margin-top:48px;
+  background:var(--ink3);border:1px solid var(--bd);
+  border-radius:16px;padding:40px;
+}
+.lcc-title{text-align:center;margin-bottom:36px}
+.lcc-title .sp{margin:0 auto}
+.lcc-cards{
+  display:grid;grid-template-columns:1fr 40px 1fr;
+  gap:0;align-items:center;
+}
+.lcc-vs{
+  text-align:center;font-family:'Barlow Condensed',sans-serif;
+  font-weight:900;font-size:1.4rem;color:var(--muted);
+}
+.lcc-card{
+  background:var(--ink2);border:1px solid var(--bd);
+  border-radius:12px;padding:24px;
+}
+.bad-lcc{border-color:rgba(255,82,82,.18)}
+.good-lcc{border-color:rgba(0,168,107,.25);background:rgba(0,168,107,.04)}
+.lcc-brand{
+  font-size:.78rem;font-weight:700;letter-spacing:.06em;
+  text-transform:uppercase;color:var(--muted);
+  margin-bottom:16px;padding-bottom:12px;border-bottom:1px solid var(--bd);
+}
+.lcc-cost-row{
+  display:flex;justify-content:space-between;align-items:center;
+  padding:8px 0;border-bottom:1px solid var(--bd);
+  font-size:.82rem;
+}
+.lcc-cost-row:last-of-type{border-bottom:none}
+.lcc-cost-row span{color:var(--muted)}
+.lcc-cost-row strong{color:var(--txt);font-weight:700}
+.g-text{color:var(--g)!important}
+.lcc-total{
+  display:flex;justify-content:space-between;align-items:center;
+  margin-top:14px;padding:14px 16px;border-radius:8px;
+  font-size:.88rem;font-weight:700;
+}
+.bad-total{background:rgba(255,82,82,.08);border:1px solid rgba(255,82,82,.2);color:#FF8080}
+.bad-total strong{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1.5rem;color:#FF8080}
+.good-total{background:rgba(0,168,107,.1);border:1px solid rgba(0,168,107,.3);color:var(--g)}
+.good-total strong{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1.5rem;color:var(--g)}
+.lcc-save{
+  text-align:center;margin-top:10px;
+  font-size:.8rem;font-weight:700;color:var(--g);
+  background:rgba(0,168,107,.08);border-radius:6px;padding:8px;
+}
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   PRICING RESPONSIVE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+@media(max-width:960px){
+  .price-inv-row{grid-template-columns:1fr}
+  .batt-module-detail{grid-template-columns:1fr;gap:32px}
+  .bmd-specs-row{grid-template-columns:repeat(3,1fr)}
+  .lcc-cards{grid-template-columns:1fr;gap:20px}
+  .lcc-vs{padding:10px 0}
+  .bc-head,.bc-row{grid-template-columns:1.2fr 1fr 1fr}
+}
+@media(max-width:768px){
+  .bmd-specs-row{grid-template-columns:repeat(3,1fr)}
+  .bc-head,.bc-row{grid-template-columns:1fr 1fr 1fr}
+  .bc-cell,.bc-hcell{padding:12px 10px;font-size:.76rem}
+}
+@media(max-width:600px){
+  .bs-options{grid-template-columns:repeat(4,1fr);gap:6px}
+  .bs-count{font-size:1.3rem}
+  .bs-kwh,.bs-hours{font-size:.58rem}
+  .batt-module-detail{padding:24px 18px}
+  .bmd-specs-row{grid-template-columns:repeat(3,1fr);gap:8px}
+  .lcc-block{padding:24px 16px}
+  .bc-head,.bc-row{grid-template-columns:.9fr 1fr 1fr}
+  .bc-cell small{display:none}
+  .price-inv-card{padding:24px 18px}
+}
+
 </style>
 </head>
 <body>
@@ -626,7 +874,7 @@ footer{background:var(--ink3);border-top:1px solid var(--bd);padding:60px 5% 32p
     <li><a href="#ai">AI</a></li>
     <li><a href="#portability">Portability</a></li>
     <li><a href="#technology">Tech</a></li>
-    <li><a href="#usecases">Use Cases</a></li>
+    <li><a href="#pricing">Pricing</a></li><li><a href="#usecases">Use Cases</a></li>
     <li><a href="#enquire">Contact</a></li>
   </ul>
   <div class="nr">
@@ -658,8 +906,16 @@ footer{background:var(--ink3);border-top:1px solid var(--bd);padding:60px 5% 32p
       <div class="hs2">🏠 Wall · Floor · Anywhere</div>
     </div>
     <div class="pr-row">
-      <div class="prc"><div class="prl">2kW Model</div><div class="prv"><sup>₹</sup>37,900</div></div>
-      <div class="prc hot"><div class="prl">3kW Model</div><div class="prv"><sup>₹</sup>39,900</div></div>
+      <div class="prc">
+        <div class="prl">2kW Inverter</div>
+        <div class="prv"><sup>₹</sup>17,000</div>
+        <div style="font-size:.68rem;color:var(--muted);margin-top:3px">+ Battery from ₹23,000</div>
+      </div>
+      <div class="prc hot">
+        <div class="prl">3kW Inverter</div>
+        <div class="prv"><sup>₹</sup>22,000</div>
+        <div style="font-size:.68rem;color:var(--muted);margin-top:3px">+ Battery from ₹23,000</div>
+      </div>
     </div>
     <div class="ctr">
       <a href="#enquire" class="bp">Get Quote</a>
@@ -955,7 +1211,7 @@ footer{background:var(--ink3);border-top:1px solid var(--bd);padding:60px 5% 32p
 <!-- CTA 3 -->
 <div class="ctablock rev">
   <h3>Upgrade Your Home Energy System Today</h3>
-  <p>₹37,900 for 2kW · ₹39,900 for 3kW · Battery modules sold separately</p>
+  <p>2kW Inverter ₹17,000 · 3kW Inverter ₹22,000 · Battery Module ₹23,000 each</p>
   <div class="ctr"><a href="#enquire" class="bp">Get Quote</a><a href="#enquire" class="bo">Talk to Expert</a><a href="#enquire" class="bg">Request Demo</a></div>
 </div>
 
@@ -1024,6 +1280,301 @@ footer{background:var(--ink3);border-top:1px solid var(--bd);padding:60px 5% 32p
   </div>
 </section>
 
+
+<!-- ═══════════════════════════════════════
+     PRICING SECTION
+═══════════════════════════════════════ -->
+<section id="pricing" style="background:var(--ink2)">
+  <div class="cx">
+    <div class="stg">Transparent Pricing</div>
+    <h2 class="sh">Choose Your System.<br><em>Expand Anytime.</em></h2>
+    <p class="sp cx">Buy the inverter once. Add battery modules as you need. Start small, grow on your terms — no rewiring, ever.</p>
+  </div>
+
+  <!-- INVERTER CARDS -->
+  <div class="price-inv-row rev">
+
+    <!-- 2kW -->
+    <div class="price-inv-card">
+      <div class="pic-header">
+        <div class="pic-badge">HOME · ESSENTIAL</div>
+        <h3>2kW Smart<br>Energy System</h3>
+        <div class="pic-tagline">Lights · Fans · TV · WiFi · Fridge</div>
+      </div>
+      <div class="pic-price-block">
+        <div class="pic-label">Inverter Unit</div>
+        <div class="pic-price"><sup>₹</sup>17,000</div>
+        <div class="pic-tax">+ GST · Battery sold separately</div>
+      </div>
+      <ul class="pic-specs">
+        <li><span class="ps-icon">⚡</span><span>2kW output power</span></li>
+        <li><span class="ps-icon">☀️</span><span>Solar hybrid input</span></li>
+        <li><span class="ps-icon">🌐</span><span>IoT + AI enabled</span></li>
+        <li><span class="ps-icon">🏠</span><span>Wall or floor mount</span></li>
+        <li><span class="ps-icon">🎁</span><span>2 years FREE IoT plan</span></li>
+      </ul>
+      <!-- Battery selector for 2kW -->
+      <div class="batt-selector">
+        <div class="bs-title">Select Battery Modules</div>
+        <div class="bs-options">
+          <div class="bs-opt active" data-inv="17000" data-batts="1" data-price="23000" onclick="selectBatt(this,'2kw')">
+            <div class="bs-count">1</div>
+            <div class="bs-kwh">2.6 kWh</div>
+            <div class="bs-hours">~4–6 hrs</div>
+          </div>
+          <div class="bs-opt" data-inv="17000" data-batts="2" data-price="46000" onclick="selectBatt(this,'2kw')">
+            <div class="bs-count">2</div>
+            <div class="bs-kwh">5.2 kWh</div>
+            <div class="bs-hours">~8–12 hrs</div>
+          </div>
+          <div class="bs-opt" data-inv="17000" data-batts="3" data-price="69000" onclick="selectBatt(this,'2kw')">
+            <div class="bs-count">3</div>
+            <div class="bs-kwh">7.8 kWh</div>
+            <div class="bs-hours">~12–18 hrs</div>
+          </div>
+          <div class="bs-opt" data-inv="17000" data-batts="4" data-price="92000" onclick="selectBatt(this,'2kw')">
+            <div class="bs-count">4</div>
+            <div class="bs-kwh">10.4 kWh</div>
+            <div class="bs-hours">~16–24 hrs</div>
+          </div>
+        </div>
+        <div class="bs-total-row">
+          <div class="bs-total-label">Inverter + <span id="2kw-batts">1</span> Battery</div>
+          <div class="bs-total-price">₹<span id="2kw-total">40,000</span></div>
+        </div>
+        <div class="bs-note">Each module: ₹23,000 · Snap-in, no wiring</div>
+      </div>
+      <a href="#enquire" class="bp" style="width:100%;text-align:center;margin-top:6px;display:block">Get Quote</a>
+    </div>
+
+    <!-- 3kW -->
+    <div class="price-inv-card featured-inv">
+      <div class="pic-popular">MOST POPULAR</div>
+      <div class="pic-header">
+        <div class="pic-badge" style="background:rgba(0,168,107,.15);color:var(--g);border-color:rgba(0,168,107,.35)">HOME · PREMIUM</div>
+        <h3>3kW Smart<br>Energy System</h3>
+        <div class="pic-tagline">All loads + Limited 1-Ton Inverter AC</div>
+      </div>
+      <div class="pic-price-block">
+        <div class="pic-label">Inverter Unit</div>
+        <div class="pic-price"><sup>₹</sup>22,000</div>
+        <div class="pic-tax">+ GST · Battery sold separately</div>
+      </div>
+      <ul class="pic-specs">
+        <li><span class="ps-icon">⚡</span><span>3kW output power</span></li>
+        <li><span class="ps-icon">☀️</span><span>Higher solar input capacity</span></li>
+        <li><span class="ps-icon">❄️</span><span>Supports 1-ton inverter AC</span></li>
+        <li><span class="ps-icon">🌐</span><span>IoT + AI enabled</span></li>
+        <li><span class="ps-icon">🏠</span><span>Wall or floor mount</span></li>
+        <li><span class="ps-icon">🎁</span><span>2 years FREE IoT plan</span></li>
+      </ul>
+      <!-- Battery selector for 3kW -->
+      <div class="batt-selector">
+        <div class="bs-title">Select Battery Modules</div>
+        <div class="bs-options">
+          <div class="bs-opt active" data-inv="22000" data-batts="1" data-price="23000" onclick="selectBatt(this,'3kw')">
+            <div class="bs-count">1</div>
+            <div class="bs-kwh">2.6 kWh</div>
+            <div class="bs-hours">~2–4 hrs</div>
+          </div>
+          <div class="bs-opt" data-inv="22000" data-batts="2" data-price="46000" onclick="selectBatt(this,'3kw')">
+            <div class="bs-count">2</div>
+            <div class="bs-kwh">5.2 kWh</div>
+            <div class="bs-hours">~4–8 hrs</div>
+          </div>
+          <div class="bs-opt" data-inv="22000" data-batts="3" data-price="69000" onclick="selectBatt(this,'3kw')">
+            <div class="bs-count">3</div>
+            <div class="bs-kwh">7.8 kWh</div>
+            <div class="bs-hours">~8–12 hrs</div>
+          </div>
+          <div class="bs-opt" data-inv="22000" data-batts="4" data-price="92000" onclick="selectBatt(this,'3kw')">
+            <div class="bs-count">4</div>
+            <div class="bs-kwh">10.4 kWh</div>
+            <div class="bs-hours">~10–16 hrs</div>
+          </div>
+        </div>
+        <div class="bs-total-row">
+          <div class="bs-total-label">Inverter + <span id="3kw-batts">1</span> Battery</div>
+          <div class="bs-total-price">₹<span id="3kw-total">45,000</span></div>
+        </div>
+        <div class="bs-note">Each module: ₹23,000 · Snap-in, no wiring</div>
+      </div>
+      <a href="#enquire" class="bp" style="width:100%;text-align:center;margin-top:6px;display:block">Get Quote</a>
+    </div>
+
+  </div>
+
+  <!-- BATTERY MODULE DETAIL CARD -->
+  <div class="batt-module-detail rev">
+    <div class="bmd-left">
+      <div class="stg" style="margin-bottom:8px">Battery Module</div>
+      <h3 class="sh" style="font-size:clamp(1.6rem,3vw,2.4rem);margin-bottom:10px">2.6 kWh LiFePO4<br><em>Module — ₹23,000</em></h3>
+      <p class="sp" style="max-width:100%">One module. Snap it in. The system detects it automatically. Add more anytime — no tools, no technician, no wiring.</p>
+      <div class="bmd-specs-row">
+        <div class="bmd-spec"><div class="bmd-sv">51.2V</div><div class="bmd-sl">Voltage</div></div>
+        <div class="bmd-spec"><div class="bmd-sv">52Ah</div><div class="bmd-sl">Capacity</div></div>
+        <div class="bmd-spec"><div class="bmd-sv">2.6kWh</div><div class="bmd-sl">Energy</div></div>
+        <div class="bmd-spec"><div class="bmd-sv">5000+</div><div class="bmd-sl">Cycles</div></div>
+        <div class="bmd-spec"><div class="bmd-sv">10yr+</div><div class="bmd-sl">Life</div></div>
+        <div class="bmd-spec"><div class="bmd-sv">CAN</div><div class="bmd-sl">Protocol</div></div>
+      </div>
+    </div>
+    <div class="bmd-right">
+      <div class="bmd-stack-visual">
+        <div class="stack-label">Snap-in Modular Stack</div>
+        <div class="stack-items" id="stackVisual">
+          <div class="stack-inv">Inverter Unit<span>2kW / 3kW</span></div>
+          <div class="stack-batt on">Battery Module 1<span>2.6 kWh</span></div>
+          <div class="stack-batt">Battery Module 2<span>2.6 kWh — Add anytime</span></div>
+          <div class="stack-batt">Battery Module 3<span>2.6 kWh — Add anytime</span></div>
+          <div class="stack-batt">Battery Module 4<span>2.6 kWh — Add anytime</span></div>
+        </div>
+        <div class="stack-total">Total backup: up to <strong>10.4 kWh</strong></div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<!-- ═══════════════════════════════════════
+     BATTERY COMPARISON: LiFePO4 vs Lead Acid
+═══════════════════════════════════════ -->
+<section id="battery-compare" style="background:var(--ink)">
+  <div class="cx">
+    <div class="stg">Battery Technology Comparison</div>
+    <h2 class="sh">Why LiFePO4 Beats<br><em>Lead-Acid Tubular</em></h2>
+    <p class="sp cx">Your traditional 12V tubular battery may seem cheaper upfront. But the numbers tell a very different story over time.</p>
+  </div>
+
+  <!-- HEAD-TO-HEAD SPEC TABLE -->
+  <div class="bc-table rev">
+    <div class="bc-head">
+      <div class="bc-hcell feat">Specification</div>
+      <div class="bc-hcell bad-h">🔋 12V Tubular Lead-Acid<br><span>150Ah × 4 = ~7.2 kWh nominal</span></div>
+      <div class="bc-hcell good-h">⚡ Galaxi LiFePO4<br><span>51.2V 52Ah = 2.6 kWh usable</span></div>
+    </div>
+    <div class="bc-row">
+      <div class="bc-cell feat">Usable Energy</div>
+      <div class="bc-cell bad-c">~3.6 kWh<br><small>Only 50% DoD safe</small></div>
+      <div class="bc-cell good-c"><strong>2.6 kWh</strong><br><small>80–90% DoD safe</small></div>
+    </div>
+    <div class="bc-row">
+      <div class="bc-cell feat">Cycle Life</div>
+      <div class="bc-cell bad-c">400–600 cycles<br><small>3–4 years typical</small></div>
+      <div class="bc-cell good-c"><strong>5,000+ cycles</strong><br><small>10–15 years typical</small></div>
+    </div>
+    <div class="bc-row">
+      <div class="bc-cell feat">Weight</div>
+      <div class="bc-cell bad-c">~60 kg (4 batteries)<br><small>Extremely heavy</small></div>
+      <div class="bc-cell good-c"><strong>~18 kg</strong><br><small>Wall-mountable</small></div>
+    </div>
+    <div class="bc-row">
+      <div class="bc-cell feat">Maintenance</div>
+      <div class="bc-cell bad-c">Top-up water every month<br><small>Corrosion, fumes, mess</small></div>
+      <div class="bc-cell good-c"><strong>Zero maintenance</strong><br><small>Sealed, no fumes</small></div>
+    </div>
+    <div class="bc-row">
+      <div class="bc-cell feat">Charge Efficiency</div>
+      <div class="bc-cell bad-c">~70–75%<br><small>25–30% energy wasted as heat</small></div>
+      <div class="bc-cell good-c"><strong>~98%</strong><br><small>Almost no energy wasted</small></div>
+    </div>
+    <div class="bc-row">
+      <div class="bc-cell feat">Depth of Discharge</div>
+      <div class="bc-cell bad-c">Max 50% DoD<br><small>Deeper = shorter life</small></div>
+      <div class="bc-cell good-c"><strong>80–90% DoD</strong><br><small>Safe deep discharge</small></div>
+    </div>
+    <div class="bc-row">
+      <div class="bc-cell feat">Thermal Safety</div>
+      <div class="bc-cell bad-c">Hydrogen gas emission<br><small>Fire/explosion risk when charging</small></div>
+      <div class="bc-cell good-c"><strong>Zero gas emission</strong><br><small>No thermal runaway risk</small></div>
+    </div>
+    <div class="bc-row">
+      <div class="bc-cell feat">Installation</div>
+      <div class="bc-cell bad-c">Floor only, external cables<br><small>Messy, fixed location</small></div>
+      <div class="bc-cell good-c"><strong>Wall or floor, snap-in</strong><br><small>Clean, portable</small></div>
+    </div>
+    <div class="bc-row">
+      <div class="bc-cell feat">Expandable</div>
+      <div class="bc-cell bad-c">No — replace entire bank<br><small>Full cost each time</small></div>
+      <div class="bc-cell good-c"><strong>Yes — add modules anytime</strong><br><small>Pay only for what you add</small></div>
+    </div>
+    <div class="bc-row">
+      <div class="bc-cell feat">Scalability</div>
+      <div class="bc-cell bad-c">Fixed 4-battery bank only</div>
+      <div class="bc-cell good-c"><strong>1 to 4 modules (2.6–10.4 kWh)</strong></div>
+    </div>
+  </div>
+
+  <!-- LIFETIME COST COMPARISON -->
+  <div class="lcc-block rev">
+    <div class="lcc-title">
+      <div class="stg">10-Year True Cost of Ownership</div>
+      <h3 class="sh" style="font-size:clamp(1.5rem,3vw,2.2rem);margin-bottom:6px">Lead-Acid Costs More<br><em>Over Time</em></h3>
+      <p class="sp">Lead-acid batteries need replacement every 3–4 years. LiFePO4 lasts 10–15 years. The math is clear.</p>
+    </div>
+    <div class="lcc-cards">
+      <div class="lcc-card bad-lcc">
+        <div class="lcc-brand">12V Tubular Lead-Acid</div>
+        <div class="lcc-cost-row">
+          <span>Initial (4 × 150Ah batteries)</span>
+          <strong>~₹28,000</strong>
+        </div>
+        <div class="lcc-cost-row">
+          <span>Replacement at yr 3–4</span>
+          <strong>~₹28,000</strong>
+        </div>
+        <div class="lcc-cost-row">
+          <span>Replacement at yr 6–8</span>
+          <strong>~₹32,000</strong>
+        </div>
+        <div class="lcc-cost-row">
+          <span>Maintenance (10 yrs)</span>
+          <strong>~₹5,000</strong>
+        </div>
+        <div class="lcc-cost-row">
+          <span>Energy loss (25% waste)</span>
+          <strong>~₹12,000</strong>
+        </div>
+        <div class="lcc-total bad-total">
+          <span>10-Year Total Cost</span>
+          <strong>~₹1,05,000</strong>
+        </div>
+      </div>
+      <div class="lcc-vs">VS</div>
+      <div class="lcc-card good-lcc">
+        <div class="lcc-brand">Galaxi LiFePO4 Module</div>
+        <div class="lcc-cost-row">
+          <span>Initial (1 × 2.6 kWh module)</span>
+          <strong>₹23,000</strong>
+        </div>
+        <div class="lcc-cost-row">
+          <span>No replacement needed</span>
+          <strong class="g-text">₹0</strong>
+        </div>
+        <div class="lcc-cost-row">
+          <span>No replacement needed</span>
+          <strong class="g-text">₹0</strong>
+        </div>
+        <div class="lcc-cost-row">
+          <span>Zero maintenance</span>
+          <strong class="g-text">₹0</strong>
+        </div>
+        <div class="lcc-cost-row">
+          <span>Energy loss (&lt;2% waste)</span>
+          <strong class="g-text">~₹800</strong>
+        </div>
+        <div class="lcc-total good-total">
+          <span>10-Year Total Cost</span>
+          <strong>~₹23,800</strong>
+        </div>
+        <div class="lcc-save">Save ~₹81,000 over 10 years</div>
+      </div>
+    </div>
+    <p style="font-size:.72rem;color:var(--muted);text-align:center;margin-top:18px">* Estimates based on typical Indian usage patterns. Actual savings vary by usage and electricity rates.</p>
+  </div>
+
+</section>
+
 <!-- COMPARISON -->
 <section class="compare" id="compare" style="background:var(--ink2)">
   <div class="cx">
@@ -1087,7 +1638,7 @@ footer{background:var(--ink3);border-top:1px solid var(--bd);padding:60px 5% 32p
       <div class="fd"><label>City</label><input type="text" placeholder="Your city"></div>
       <div class="frow">
         <div class="fd"><label>Product</label>
-          <select><option value="">Select model</option><option>2kW – ₹37,900</option><option>3kW – ₹39,900</option><option>Not sure</option></select>
+          <select><option value="">Select model</option><option>2kW Inverter – ₹17,000</option><option>3kW Inverter – ₹22,000</option><option>Not sure</option></select>
         </div>
         <div class="fd"><label>Battery Modules</label>
           <select><option value="">How many?</option><option>1 Module (~2.6 kWh)</option><option>2 Modules (~5.2 kWh)</option><option>Not sure</option></select>
@@ -1142,7 +1693,7 @@ footer{background:var(--ink3);border-top:1px solid var(--bd);padding:60px 5% 32p
     </ul></div>
     <div class="fcl"><h4>Company</h4><ul>
       <li><a href="#trust">About</a></li>
-      <li><a href="#usecases">Use Cases</a></li>
+      <li><a href="#pricing">Pricing</a></li><li><a href="#usecases">Use Cases</a></li>
       <li><a href="#dealer">Become Dealer</a></li>
       <li><a href="#enquire">Contact</a></li>
       <li><a href="#faq">FAQ</a></li>
@@ -1175,6 +1726,28 @@ function hsub(e){var b=e.target;b.textContent='✓ Submitted! We\'ll contact you
 /* REVEAL */
 var ro=new IntersectionObserver(function(e){e.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');ro.unobserve(e.target)}})},{threshold:.08});
 document.querySelectorAll('.rev').forEach(function(el){ro.observe(el)});
+
+/* BATTERY SELECTOR */
+function selectBatt(el, model) {
+  var parent = el.closest('.bs-options');
+  parent.querySelectorAll('.bs-opt').forEach(function(o){o.classList.remove('active')});
+  el.classList.add('active');
+  var inv = parseInt(el.dataset.inv);
+  var battCost = parseInt(el.dataset.price);
+  var batts = parseInt(el.dataset.batts);
+  var total = inv + battCost;
+  var fmt = total.toLocaleString('en-IN');
+  document.getElementById(model+'-total').textContent = fmt;
+  document.getElementById(model+'-batts').textContent = batts;
+  // update stack visual if 2kw model
+  if(model === '2kw' || model === '3kw') {
+    var stacks = document.querySelectorAll('.stack-batt');
+    stacks.forEach(function(s,i){
+      s.classList.toggle('on', i < batts);
+    });
+  }
+}
+
 /* PORT OPTS */
 document.querySelectorAll('.po').forEach(function(o){o.addEventListener('click',function(){document.querySelectorAll('.po').forEach(function(x){x.classList.remove('on')});o.classList.add('on')})});
 </script>
